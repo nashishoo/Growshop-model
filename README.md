@@ -1,85 +1,124 @@
 # Conectados 420 Growshop
 
-> Plataforma web diseñada para la gestión y venta de productos de cultivo, ofreciendo una experiencia moderna para usuarios y una administración completa para el negocio.
+> **La plataforma integral para el cultivador moderno.** Gestión de ventas, comunidad y administración especializada.
 
 ![Hero Section](https://i.postimg.cc/J7ccxcDG/hero-420.png)
 
+## 📖 Sobre el Proyecto
+
+**Conectados 420** es un e-commerce robusto diseñado específicamente para el rubro del cultivo ("Growshop"). No es solo una tienda online; es un ecosistema completo que integra:
+
+*   📱 **Tienda Pública (Frontend)**: Interfaz moderna, rápida y responsiva para clientes.
+*   �️ **Panel de Administración (Backoffice)**: Control total sobre inventario, pedidos, clientes y logística.
+*   🧠 **Backend Serverless**: Potenciado por Supabase para autenticación y base de datos en tiempo real.
+
 > [!NOTE]
-> **Inventario Precargado**: El catálogo inicial de productos ha sido generado mediante un scraper desarrollado específicamente para este proyecto, facilitando el llenado automático de la base de datos ante la ausencia de una API pública de productos del rubro.
+> **Inventario Precargado**: El catálogo inicial de productos ha sido generado mediante un scraper desarrollado a medida, permitiendo desplegar la tienda con datos reales desde el día uno.
 
-## 📖 Descripción
-
-Conectados 420 es un e-commerce especializado que conecta a los cultivadores con los mejores productos del mercado. La plataforma está dividida en dos grandes áreas: la tienda pública para clientes y el panel de administración para la gestión del negocio.
+---
 
 ## 🚀 Características Principales
 
-### Para Clientes
-- **Experiencia de Usuario Moderna**: Hero section con promociones, navegación intuitiva y búsqueda rápida.
-- **Catálogo Completo**: Organización por categorías (Semillas, Indoor, Nutrientes, Parafernalia, etc.).
-- **Pagos Seguros**: Integración 100% funcional con **Mercado Pago**.
-- **Notificaciones Automáticas**: Sistema de envío de correos electrónicos para confirmación de pedidos y actualizaciones de estado.
-- **Sistema de Registro "Club 420"**: Beneficios exclusivos para usuarios registrados.
-- **Proceso de Compra Flexible**: Carrito persistente, múltiples métodos de pago y checkout como invitado o registrado.
-- **Seguimiento**: Historial de pedidos y estado de envíos.
+### Para el Cliente
+Una experiencia de compra fluida y confiable.
 
-![Mercado Pago y Emails](https://i.postimg.cc/bvv8R4fP/mercadopago-emails.png)
+*   **Navegación Intuitiva**: Categorías claras (Indoor, Semillas, Parafernalia, etc.) y búsqueda instantánea.
+*   **Club 420**: Sistema de registro con beneficios exclusivos y seguimiento de historial.
+*   **Pagos Seguros**: Integración nativa con **Mercado Pago**.
+*   **Notificaciones**: Emails automáticos de confirmación de pedido.
 
-### Para Administradores
-- **Dashboard Integral**: Métricas en tiempo real de ventas, pedidos y stock.
-- **Gestión de Inventario**: Control total de productos, precios, categorías y stock.
-- **Procesamiento de Pedidos**: Flujo de trabajo desde la recepción hasta la entrega.
-- **Marketing**: Creación y gestión de cupones de descuento.
-- **Logística**: Configuración de zonas de envío y tarifas.
-- **CRM**: Base de datos de clientes y segmentación.
+<div align="center">
+  <img src="https://i.postimg.cc/L524mZMC/comprobante-pago-420.png" alt="Comprobante de Pago" width="45%" style="margin: 5px;" />
+  <img src="https://i.postimg.cc/PJTfd8kR/login-420.png" alt="Login de Usuario" width="45%" style="margin: 5px;" />
+</div>
+
+### Para el Administrador
+Un centro de comando para operar el negocio sin fricción.
+
+*   **Dashboard en Tiempo Real**: Métricas clave de ventas y stock.
+*   **Gestión de Pedidos**: Flujo de estados (Pendiente -> Preparando -> Enviado).
+*   **Logística**: Configuración de zonas de envío y seguimiento de couriers.
+*   **Marketing**: Motor de cupones de descuento.
 
 ![Dashboard Admin](https://i.postimg.cc/gkzyTX83/admin-panel-dashboard.png)
 
-### Galería de Administración
+---
 
-<div align="center">
-  <img src="https://i.postimg.cc/J7x55r0m/admin-gestion-cupones.png" alt="Cupones" width="45%" style="margin: 5px;" />
-  <img src="https://i.postimg.cc/HsY0hcX7/admin-panel-gestion-envios.png" alt="Envíos" width="45%" style="margin: 5px;" />
-</div>
+## 📸 Galería del Sistema
 
-## 🛠️ Módulos del Sistema
+### Plataforma de Ventas
 
-### 1. Plataforma Pública
-- **Landing Page**: Productos destacados, ofertas y accesos rápidos.
-- **Catálogo**: Filtros avanzados y fichas de producto detalladas.
-- **Zona de Cultivo**: Información educativa y kits.
+| Productos Destacados | Ficha de Producto |
+|:---:|:---:|
+| ![Destacados](https://i.postimg.cc/QChNjW3X/destacados-420.png) | ![Modal Producto](https://i.postimg.cc/fyDWM0Ns/modal-comun-420.png) |
 
-### 2. Panel de Administración
-Acceso restringido para la gestión operativa.
+| Banco Genético | Parafernalia |
+|:---:|:---:|
+| ![Semillas](https://i.postimg.cc/j2tqRJbR/banco-genetico-420.png) | ![Accesorios](https://i.postimg.cc/PJTfd8k0/parafernaria-420.png) |
 
-<div align="center">
-  <img src="https://i.postimg.cc/9FmPnRZG/admin-panel-pedidos.png" alt="Pedidos" width="30%" />
-  <img src="https://i.postimg.cc/wTq5GyLm/admin-panel-productos.png" alt="Productos" width="30%" />
-  <img src="https://i.postimg.cc/vHY7Ngfg/admin-panel-clientes.png" alt="Clientes" width="30%" />
-</div>
+### Panel de Administración
 
-- **URL**: `/admin/login`
-- **Credenciales por defecto**:
-  - Email: `admin@conectados420.cl`
-  - Password: `Conectados2026`
-
-## 📦 Instalación y Despliegue
-
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/usuario/growshop-model.git
-   ```
-2. Instalar dependencias:
-   ```bash
-   npm install
-   ```
-3. Iniciar servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
-
-## 📄 Documentación Adicional
-
-Para más detalles sobre el uso de la plataforma, consulte el [Manual de Usuario](MANUAL_USUARIO.md) (si disponible) o contacte a soporte.
+| Gestión de Productos | Cola de Envíos |
+|:---:|:---:|
+| ![Admin Productos](https://i.postimg.cc/wTq5GyLm/admin-panel-productos.png) | ![Admin Envíos](https://i.postimg.cc/3J8jc4m0/admin-panel-cola-envios.png) |
 
 ---
-*Desarrollado para Conectados 420 - 2026*
+
+## 🛠️ Stack Tecnológico
+
+El proyecto utiliza tecnologías modernas para garantizar rendimiento y escalabilidad.
+
+*   **Frontend**: React + Vite (Velocidad y experiencia de desarrollo).
+*   **Estilos**: Tailwind CSS (Diseño responsive y customización rápida).
+*   **Backend / DB**: Supabase (PostgreSQL, Auth, Edge Functions).
+*   **Pagos**: SDK de Mercado Pago.
+*   **Despliegue**: Compatible con Vercel / Netlify.
+
+---
+
+## � Instalación y Despliegue Local
+
+Sigue estos pasos para levantar el proyecto en tu entorno local.
+
+### Prerrequisitos
+*   Node.js (v18+)
+*   Cuenta en Supabase
+*   Cuenta Developer en Mercado Pago (para credenciales de prueba)
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/nashishoo/Growshop-model.git
+cd Growshop-model
+```
+
+### 2. Instalar dependencias
+```bash
+cd frontend
+npm install
+```
+
+### 3. Configurar Variables de Entorno
+Crea un archivo `.env` en la carpeta `frontend` basado en `.env.example`:
+
+```env
+VITE_SUPABASE_URL=tu_url_supabase
+VITE_SUPABASE_ANON_KEY=tu_clave_anonima
+VITE_MERCADOPAGO_PUBLIC_KEY=tu_public_key_mp
+```
+
+### 4. Iniciar el servidor de desarrollo
+```bash
+npm run dev
+```
+La aplicación estará disponible en `http://localhost:5173`.
+
+---
+
+## � Documentación Adicional
+
+*   [Manual de Usuario Completo](MANUAL_USUARIO.md): Guía detallada de uso para clientes y staff.
+*   [Configuración de Mercado Pago](MERCADOPAGO_SETUP.md): Pasos para activar la pasarela de pagos.
+
+---
+
+Desarrollado con 💚 para la comunidad cultivadora.
