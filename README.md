@@ -113,7 +113,24 @@ Para tener la base de datos funcional con datos de prueba:
 2.  Copia y ejecuta el contenido de `supabase/schema_dump.sql` (Crea la estructura).
 3.  Copia y ejecuta el contenido de `supabase/seed.sql` (Pobla categorías, marcas y configuración).
 
-### 5. Iniciar el servidor de desarrollo
+### 5. Configurar Edge Functions (Automatización)
+Para que funcionen los correos y los pagos, debes desplegar las funciones en Supabase:
+
+1.  Instala Supabase CLI: `npm i -g supabase`
+2.  Logueate: `supabase login`
+3.  Vincula tu proyecto: `supabase link --project-ref tu_project_id`
+4.  Establece los secretos (Credenciales privadas):
+    ```bash
+    supabase secrets set MP_ACCESS_TOKEN=tu_access_token_mercadopago
+    supabase secrets set RESEND_API_KEY=tu_api_key_resend
+    supabase secrets set FROM_EMAIL="Tu Tienda <no-reply@tudominio.com>"
+    ```
+5.  Despliega las funciones:
+    ```bash
+    supabase functions deploy
+    ```
+
+### 6. Iniciar el servidor de desarrollo
 ```bash
 npm run dev
 ```
