@@ -1,0 +1,18 @@
+# Supabase Edge Functions Configuration
+# https://supabase.com/docs/guides/functions/config
+
+[functions.send-notification-email]
+# Allow public access for email notifications from frontend
+verify_jwt = false
+
+[functions.process-mp-payment]
+# Payment processing - allow from frontend but validate internally
+verify_jwt = false
+
+[functions.mercadopago-webhook]
+# Webhook from MercadoPago - no JWT, we verify the signature internally
+verify_jwt = false
+
+[functions.delete-test-orders]
+# Admin function - requires JWT
+verify_jwt = true
