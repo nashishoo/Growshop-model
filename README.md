@@ -48,9 +48,9 @@ Un centro de comando para operar el negocio sin fricción.
 
 ### Plataforma de Ventas
 
-| Productos Destacados | Ficha de Producto |
-|:---:|:---:|
-| ![Destacados](https://i.postimg.cc/QChNjW3X/destacados-420.png) | ![Modal Producto](https://i.postimg.cc/fyDWM0Ns/modal-comun-420.png) |
+| Productos Destacados | Ficha Destacada | Ficha Común |
+|:---:|:---:|:---:|
+| ![Destacados](https://i.postimg.cc/QChNjW3X/destacados-420.png) | ![Ficha Destacada](https://i.postimg.cc/cC01d8S0/destacado-modal-420.png) | ![Ficha Común](https://i.postimg.cc/fyDWM0Ns/modal-comun-420.png) |
 
 | Banco Genético | Parafernalia |
 |:---:|:---:|
