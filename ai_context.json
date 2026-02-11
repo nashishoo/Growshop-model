@@ -1,0 +1,85 @@
+{
+    "project": {
+        "name": "Conectados 420 Growshop",
+        "description": "E-commerce platform specialized for growshops, featuring a public store, admin panel, and serverless backend.",
+        "version": "1.0.0",
+        "repository": "https://github.com/nashishoo/Growshop-model"
+    },
+    "stack": {
+        "frontend": {
+            "framework": "React",
+            "build_tool": "Vite",
+            "styling": "Tailwind CSS",
+            "router": "React Router DOM",
+            "icons": "Lucide React",
+            "state_management": "Context API / Local State"
+        },
+        "backend": {
+            "platform": "Supabase",
+            "database": "PostgreSQL",
+            "auth": "Supabase Auth",
+            "functions": "Deno (Edge Functions)",
+            "storage": "Supabase Storage"
+        },
+        "integrations": {
+            "payments": "Mercado Pago SDK",
+            "emails": "Resend API (via Edge Functions)"
+        }
+    },
+    "architecture": {
+        "database": {
+            "schema_dump": "supabase/schema_dump.sql",
+            "seed_data": "supabase/seed.sql",
+            "tables": [
+                "products (variant handling via product_attributes)",
+                "categories (hierarchical)",
+                "orders",
+                "profiles (extends auth.users)",
+                "store_settings",
+                "shipping_zones"
+            ]
+        },
+        "edge_functions": {
+            "process-mp-payment": "Handles Mercado Pago webhooks and order status updates.",
+            "send-notification-email": "Transactional emails via Resend (order confirmation, shipping updates)."
+        },
+        "security": {
+            "rls": "Enabled on all tables.",
+            "policies": "Public read for products/catalogs. Authenticated user for own data. Admin role for backoffice."
+        }
+    },
+    "conventions": {
+        "commits": "Conventional Commits (feat, fix, docs, style, refactor, chore)",
+        "branching": "Main branch for stable releases.",
+        "code_style": {
+            "js": "ES6+, Functional Components, Hooks",
+            "css": "Utility-first (Tailwind)",
+            "naming": "PascalCase for components, camelCase for functions/vars"
+        }
+    },
+    "setup": {
+        "env_vars": [
+            "VITE_SUPABASE_URL",
+            "VITE_SUPABASE_ANON_KEY",
+            "VITE_MERCADOPAGO_PUBLIC_KEY"
+        ],
+        "secrets": [
+            "MP_ACCESS_TOKEN",
+            "RESEND_API_KEY",
+            "FROM_EMAIL",
+            "SUPABASE_SERVICE_ROLE_KEY"
+        ],
+        "commands": {
+            "dev": "npm run dev",
+            "build": "npm run build",
+            "preview": "npm run preview",
+            "deploy_functions": "supabase functions deploy"
+        }
+    },
+    "key_features": [
+        "Inventory Scraper (Pre-loaded data)",
+        "Featured Product Modal vs Standard Modal",
+        "Dynamic Category Carousel",
+        "Admin Dashboard with Charts"
+    ]
+}
