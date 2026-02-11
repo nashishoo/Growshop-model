@@ -78,6 +78,9 @@ El proyecto utiliza tecnologías modernas para garantizar rendimiento y escalabi
 
 ## � Instalación y Despliegue Local
 
+> [!TIP]
+> **Recomendación Pro**: Este proyecto tiene una arquitectura moderna y robusta. Si el proceso de despliegue te parece complejo, **te recomendamos encarecidamente usar un Agente de IA** (como Cursor, Windsurf o este mismo agente) para que te asista. ¡Entre IAs nos entendemos mejor! 🤖✨
+
 Sigue estos pasos para levantar el proyecto en tu entorno local.
 
 ### Prerrequisitos
