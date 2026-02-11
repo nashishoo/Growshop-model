@@ -13,7 +13,7 @@ const SeedsCatalog = () => {
     const [selectedProduct, setSelectedProduct] = useState(null);
 
     // Limits
-    const ITEMS_PER_COL = 6; // Keeping it slightly compact but navigable, as 10 per col is huge. 
+    const ITEMS_PER_COL = 6; // Keeping it slightly compact but navigable, as 10 per col is huge.
     // User asked for "10 por fila" (row) which implies width. Since this is 2-col layout, 6-8 is reasonable per side.
 
     useEffect(() => {
@@ -23,11 +23,11 @@ const SeedsCatalog = () => {
     const fetchSeedProducts = async () => {
         setLoading(true);
         try {
-            // 1. Fetch Automáticas - search in product name OR category
+            // 1. Fetch Automaticas - search in product name OR category
             const { data: autoData } = await supabase
                 .from('products')
                 .select('*, brands(name), categories!inner(name)')
-                .or('name.ilike.%auto%,name.ilike.%automática%,categories.name.ilike.%auto%')
+                .or('name.ilike.%auto%,name.ilike.%automatica%,categories.name.ilike.%auto%')
                 .range(pageAuto * ITEMS_PER_COL, (pageAuto + 1) * ITEMS_PER_COL - 1)
                 .order('price', { ascending: false });
 
@@ -43,7 +43,7 @@ const SeedsCatalog = () => {
             const { data: femData } = await supabase
                 .from('products')
                 .select('*, brands(name), categories!inner(name)')
-                .or('name.ilike.%fem%,name.ilike.%feminiz%,categories.name.ilike.%fem%,categories.name.ilike.%regular%')
+                .or('name.ilike.%fem%,name.ilike.%feminiz%,name.ilike.%feminizada%,categories.name.ilike.%fem%,categories.name.ilike.%regular%,categories.name.ilike.%feminizada%')
                 .range(pageFem * ITEMS_PER_COL, (pageFem + 1) * ITEMS_PER_COL - 1)
                 .order('price', { ascending: false });
 
@@ -116,8 +116,8 @@ const SeedsCatalog = () => {
                                 <Timer size={40} />
                             </div>
                             <div>
-                                <h3 className="text-4xl font-graffiti text-white">AUTOMÁTICAS</h3>
-                                <p className="text-violet-400 font-mono text-xs uppercase tracking-widest">RÁPIDA FLORACIÓN • CICLO CORTO</p>
+                                <h3 className="text-4xl font-graffiti text-white">AUTOMATICAS</h3>
+                                <p className="text-violet-400 font-mono text-xs uppercase tracking-widest">RAPIDA FLORACION - CICLO CORTO</p>
                             </div>
                         </div>
 
@@ -144,7 +144,6 @@ const SeedsCatalog = () => {
                         </div>
                     </div>
 
-
                     {/* === Column 2: FEMINIZADAS === */}
                     <div className="relative flex flex-col">
                         <div className="flex items-center gap-4 mb-8 border-b-2 border-indigo-500/30 pb-4 justify-end lg:flex-row-reverse text-right">
@@ -153,7 +152,7 @@ const SeedsCatalog = () => {
                             </div>
                             <div>
                                 <h3 className="text-4xl font-graffiti text-white">FEMINIZADAS</h3>
-                                <p className="text-indigo-400 font-mono text-xs uppercase tracking-widest">GENÉTICA ESTABLE • MAYOR ALCANCE</p>
+                                <p className="text-indigo-400 font-mono text-xs uppercase tracking-widest">GENETICA ESTABLE - MAYOR ALCANCE</p>
                             </div>
                         </div>
 
