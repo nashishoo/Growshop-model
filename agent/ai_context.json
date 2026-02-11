@@ -5,6 +5,16 @@
         "version": "1.0.0",
         "repository": "https://github.com/nashishoo/Growshop-model"
     },
+    "manifesto": {
+        "vision": "To create a premium, community-centric e-commerce experience ('Club 420') that goes beyond simple transactions, offering a visually stunning and immersive environment for cultivators.",
+        "goal": "Provide a complete, zero-maintenance digital ecosystem for Growshops, solving the chaos of inventory updates and manual order processing with a sleek, serverless solution.",
+        "core_values": [
+            "Visual Excellence: The UI must WOW the user immediately. Use Glassmorphism, Neon Green accents, and fluid Micro-animations. Boring designs are strictly forbidden.",
+            "Operational Simplicity: The Admin Panel must be intuitively usable by non-technical staff. Automation is key (emails, stock updates).",
+            "Data Integrity: User data is sacred. Never expose private info. Payments and Orders must be transactional and atomic.",
+            "Community First: The platform is a hub. Features like 'Club 420' (membership) are as important as the checkout."
+        ]
+    },
     "stack": {
         "frontend": {
             "framework": "React",
@@ -56,6 +66,34 @@
             "css": "Utility-first (Tailwind)",
             "naming": "PascalCase for components, camelCase for functions/vars"
         }
+    },
+    "constraints": {
+        "tools": {
+            "allowed": [
+                "Supabase (Auth, DB, Storage, Edge Functions)",
+                "React + Vite",
+                "Tailwind CSS",
+                "Mercado Pago SDK",
+                "Resend API"
+            ],
+            "forbidden": [
+                "Complex custom backends (NestJS/Express/Python) unless absolutely necessary",
+                "jQuery, Bootstrap or legacy frameworks",
+                "Direct database access from client (Always use Supabase SDK or Edge Functions)"
+            ]
+        },
+        "budget": "Strictly Serverless Free/Pro Tier compatible. Avoid adding monthly recurring costs (e.g. expensive 3rd party sass) without user approval.",
+        "rules": [
+            "Respect 'seed.sql' logic. Do not break the initial demo data.",
+            "Keep 'schema_dump.sql' as the single source of truth for the DB structure.",
+            "Maintain the 'Cyberpunk/Neon' aesthetic. Do not revert to default browser styles."
+        ]
+    },
+    "handling_directives": {
+        "user_input": "Sanitize strictly. Trust no input from the client. Validate types in Edge Functions.",
+        "edge_cases": "Always handle payment failures gracefully. If emails fail, the order should still proceed but log the error.",
+        "new_features": "When proposing features, ask: 'Does this help the growshop owner save time?' or 'Does this make the site look cooler?'. If yes, proceed.",
+        "bugs": "If a bug is found, fix it in the root cause. If it's a UI bug, check mobile responsiveness first."
     },
     "setup": {
         "env_vars": [
